@@ -26,8 +26,13 @@ let pacientes = [{
     ultimaVisitaPagada: true,
     ultimaVisita: '4/4/2022 18: 32: 19'
 }];
-let pacientesVisitados = pacientes.map(paciente => paciente.ultimaVisita = new Date().toLocaleString()); // TODO   
-console.log("Apartado C: ", pacientesVisitados) // La propiedad 'ultimaVisita' de TODOS los pacientes debe estar actualizada a fecha de hoy
+// let pacientesVisitados = pacientes.map(paciente => paciente.ultimaVisita = new Date().toLocaleString()); // TODO   
+pacientesVisitados = pacientes.map(paciente => ({
+    ...paciente,
+    ultimaVisita:  new Date().toLocaleString()
+}))
+
+console.log("Apartado C: ", pacientesVisitados) // La propiedad 'ultimaVisita' de TODOS los pacientes debe estar actualizada a fecha de ho
 
 // D) DIFÍCIL. Usa la función map para AGREGAR un nuevo campo al array de pacientes. El campo debe llamarse 'avisos'. Si el paciente NO ha pagado la última visita, dicho campo debe contener el string 'Paciente moroso, cobrar!'; en caso contrario, debe dejarse vacío. BONUS: usa un condicional ternario. BONUS: Usa el operador ...object para no tener que escribir todos los campos.
 
