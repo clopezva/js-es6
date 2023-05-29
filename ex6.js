@@ -13,8 +13,6 @@
 //     return element;
 // });
 
-
-
 function removeEveryOther(arr) {
     
     //your code here

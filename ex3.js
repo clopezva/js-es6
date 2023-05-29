@@ -29,7 +29,8 @@ let pacientes = [{
 // let pacientesVisitados = pacientes.map(paciente => paciente.ultimaVisita = new Date().toLocaleString()); // TODO   
 pacientesVisitados = pacientes.map(paciente => ({
     ...paciente,
-    ultimaVisita:  new Date().toLocaleString()
+    ultimaVisita:  new Date().toLocaleString(),
+    //ultimoPago: 400
 }))
 
 console.log("Apartado C: ", pacientesVisitados) // La propiedad 'ultimaVisita' de TODOS los pacientes debe estar actualizada a fecha de ho
